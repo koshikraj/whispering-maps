@@ -5,9 +5,11 @@ import Image from 'next/image'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import NewsletterPopup from './components/NewsletterPopup'
+import ContactPopup from './components/ContactPopup'
 
 export default function Home(): React.JSX.Element {
   const [isPopupOpen, setIsPopupOpen] = useState(false)
+  const [isContactOpen, setIsContactOpen] = useState(false)
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 py-6 sm:py-10">
@@ -121,12 +123,31 @@ export default function Home(): React.JSX.Element {
         </button>
       </section>
 
+      {/* Contact Section */}
+      <section className="text-center mb-20">
+        <p className="text-lg mb-5 px-4">
+          Have a question or idea? We'd love to hear from you!
+        </p>
+        <button
+          onClick={() => setIsContactOpen(true)}
+          className="bg-green-600 text-white font-medium py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105"
+        >
+          Contact Us
+        </button>
+      </section>
+
       <Footer />
 
       {/* Newsletter Popup */}
       <NewsletterPopup 
         isOpen={isPopupOpen} 
         onClose={() => setIsPopupOpen(false)} 
+      />
+
+      {/* Contact Popup */}
+      <ContactPopup 
+        isOpen={isContactOpen} 
+        onClose={() => setIsContactOpen(false)} 
       />
     </div>
   )
