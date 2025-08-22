@@ -17,7 +17,7 @@ export default function Home(): React.JSX.Element {
 
       {/* Video Section */}
       <section className="text-center mb-15">
-        <video width="100%" height="450" controls className="max-w-4xl mx-auto">
+        <video width="100%" height="450" controls autoPlay loop muted className="max-w-4xl mx-auto">
           <source src="/assets/promo.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -31,30 +31,30 @@ export default function Home(): React.JSX.Element {
       </section>
 
       {/* Featured Book Section */}
-      <section className="flex flex-col lg:flex-row items-center gap-8 lg:gap-15 mb-20">
-        <div className="flex-none w-full max-w-[500px] lg:w-[500px]">
+      <section className="flex flex-col lg:flex-row items-center gap-4 lg:gap-8 mb-20">
+        <div className="flex-none w-full max-w-[600px] lg:w-[600px]">
           <Image
             src="/assets/book.png"
             alt="The Seven Kids and the Wolf Book Cover"
-            width={500}
-            height={600}
+            width={600}
+            height={720}
             className="w-full h-auto"
           />
         </div>
-        <div className="flex-1 text-center lg:text-left">
+        <div className="flex-1 text-center lg:text-left pl-8">
           <p className="text-lg mb-5">
             We began with <strong>The Seven Kids and the Wolf</strong>, a playful and bold retelling of a classic. Not too scary, not too sweet—just right for curious minds and bedtime giggles.
           </p>
           <p className="text-lg">
-            Check it out on <a href="#" className="text-linkBlue underline">Amazon!</a>
+            Check it out on Amazon: <a target='_blank' href="https://www.amazon.com/dp/B0FF3D4Y34" className="text-linkBlue underline">US</a> | <a target='_blank' href="https://www.amazon.in/dp/B0FF3D4Y34" className="text-linkBlue underline">India</a>
           </p>
         </div>
       </section>
 
       {/* New Adventures Section */}
       <section className="relative mb-20">
-        <div className="relative z-10 min-h-[400px] lg:min-h-[600px]">
-          <div className="hidden lg:block absolute top-0 right-0 w-[80%] h-full">
+        <div className="relative z-10 min-h-[400px] lg:min-h-[600px] flex items-center">
+          <div className="hidden lg:block absolute -top-8 -right-8 w-[65%] h-[120%]">
             <Image
               src="/assets/frame.png"
               alt="Background illustrations"
@@ -63,7 +63,7 @@ export default function Home(): React.JSX.Element {
               priority
             />
           </div>
-          <div className="relative z-20 max-w-full lg:max-w-[40%] p-4 lg:p-8">
+          <div className="relative z-20 max-w-full lg:max-w-[45%] p-4 lg:p-8">
             <h2 className="text-xl lg:text-2xl mb-6 lg:mb-8 text-center lg:text-left">New adventures are being drawn and dreamed:</h2>
             <ul className="list-none mb-6 lg:mb-8">
               <li className="flex items-center mb-4 lg:mb-5 text-base lg:text-lg">
@@ -110,16 +110,15 @@ export default function Home(): React.JSX.Element {
           We're just getting started. The next pages are on their way.
         </p>
         <div className="flex items-center justify-center gap-3 text-lg px-4">
-          <div className="w-5 h-5 bg-lightBlue rounded-full flex-shrink-0"></div>
           <span>
             <strong>Sign up</strong> to be the first to see sneak peeks, behind-the-scenes magic, and launch updates.
           </span>
         </div>
         <button
           onClick={() => setIsPopupOpen(true)}
-          className="mt-6 bg-gradient-to-r from-orange-200 to-pink-200 text-white font-medium py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105"
+          className="mt-6 bg-green-600 text-white font-medium py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105"
         >
-          Subscribe to Newsletter
+          Join the Story Circle
         </button>
       </section>
 
