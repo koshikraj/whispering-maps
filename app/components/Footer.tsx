@@ -7,7 +7,7 @@ export default function Footer(): React.JSX.Element {
         New stories are just around the bend.
       </div>
       <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0 text-xs lg:text-sm text-gray-600">
-        <div>© 2025 Panchitra Katha Publishing LLP</div>
+        <div>© 2025 Panchitra Katha Publishing</div>
         <div className="flex gap-6">
           <a 
             href="https://www.facebook.com/people/Whispering-Maps/61578763553281/" 
