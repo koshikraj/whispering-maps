@@ -40,7 +40,7 @@ export async function POST(request: NextRequest) {
             </p>
             
             <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
-              Thank you for subscribing to Whispering Maps! 🔮
+              Thank you for subscribing to Whispering Maps!
             </p>
             
             <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">

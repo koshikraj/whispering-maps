@@ -32,7 +32,7 @@ export default function NewsletterPopup({ isOpen, onClose }: NewsletterPopupProp
 
       if (response.ok) {
         setIsSuccess(true)
-        setMessage('Thank you for subscribing! Check your email for a magical welcome message.')
+        setMessage('Welcome to our Story Circle! Check your email to confirm your subscription.')
         
         // Clear form
         setName('')
@@ -67,12 +67,12 @@ export default function NewsletterPopup({ isOpen, onClose }: NewsletterPopupProp
 
   return (
     <div 
-      className="fixed inset-0 bg-gray-400 bg-opacity-30 flex items-center justify-center z-50 p-4"
+      className="fixed inset-0 bg-black bg-opacity-20 backdrop-blur-sm flex items-center justify-center z-50 p-4"
       onClick={handleOverlayClick}
     >
-      <div className="bg-white rounded-xl shadow-2xl max-w-md w-full relative overflow-hidden border border-gray-300">
-        {/* Background with watercolor-like texture and stars */}
-        <div className="relative bg-gradient-to-br from-green-50 via-green-100 to-green-50 p-8">
+      <div className="bg-cream rounded-xl shadow-lg max-w-md w-full relative overflow-hidden">
+        {/* Clean, minimal background matching the landing page */}
+        <div className="relative bg-cream p-8">
           {/* Stars decoration - scattered yellow stars */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute top-6 right-8 text-yellow-400 text-xl">⭐</div>
@@ -123,7 +123,7 @@ export default function NewsletterPopup({ isOpen, onClose }: NewsletterPopupProp
                   id="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full px-4 py-3 border border-amber-300 rounded-lg bg-amber-50 focus:outline-none focus:ring-2 focus:ring-green-300 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-300 focus:border-transparent"
                   placeholder="Your name"
                   required
                   disabled={isSubmitting}
@@ -139,7 +139,7 @@ export default function NewsletterPopup({ isOpen, onClose }: NewsletterPopupProp
                   id="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-3 border border-amber-300 rounded-lg bg-amber-50 focus:outline-none focus:ring-2 focus:ring-green-300 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-300 focus:border-transparent"
                   placeholder="your.email@example.com"
                   required
                   disabled={isSubmitting}
@@ -152,7 +152,7 @@ export default function NewsletterPopup({ isOpen, onClose }: NewsletterPopupProp
                 className={`w-full font-medium py-3 px-6 rounded-lg shadow-md transition-all duration-200 transform ${
                   isSubmitting 
                     ? 'bg-gray-400 text-gray-600 cursor-not-allowed' 
-                    : 'bg-gradient-to-r from-orange-200 to-pink-200 text-white hover:shadow-lg hover:scale-105'
+                    : 'bg-green-600 text-white hover:shadow-lg hover:scale-105'
                 }`}
               >
                 {isSubmitting ? 'Subscribing...' : 'Subscribe'}

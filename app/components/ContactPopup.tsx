@@ -74,9 +74,9 @@ export default function ContactPopup({ isOpen, onClose }: ContactPopupProps): Re
       className="fixed inset-0 bg-gray-400 bg-opacity-30 flex items-center justify-center z-50 p-4"
       onClick={handleOverlayClick}
     >
-      <div className="bg-white rounded-xl shadow-2xl max-w-lg w-full relative overflow-hidden border border-gray-300">
+      <div className="bg-cream rounded-xl shadow-2xl max-w-lg w-full relative overflow-hidden border border-gray-300">
         {/* Background with warm rustic texture and stars */}
-        <div className="relative bg-gradient-to-br from-yellow-50 via-green-50 to-yellow-50 p-8">
+        <div className="relative bg-cream p-8">
           {/* Stars decoration - scattered stars in two shades */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute top-6 right-8 text-green-600 text-xl">⭐</div>
