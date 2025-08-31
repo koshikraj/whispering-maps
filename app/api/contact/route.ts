@@ -63,7 +63,7 @@ export async function POST(request: NextRequest) {
 
     // Send notification email to admin with the contact form details
     const adminEmail = {
-      to: process.env.ADMIN_EMAIL || 'koshik.raj@gmail.com',
+      to: process.env.ADMIN_EMAIL || 'contact@whisperingmaps.com',
       from: process.env.FROM_EMAIL || 'noreply@whisperingmaps.com',
       subject: 'New Contact Form Submission - Whispering Maps',
       html: `
