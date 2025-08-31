@@ -83,7 +83,7 @@ export async function POST(request: NextRequest) {
 
     // Send notification email to admin
     const adminEmail = {
-      to: process.env.ADMIN_EMAIL || 'koshik.raj@gmail.com',
+      to: process.env.ADMIN_EMAIL || 'contact@whisperingmaps.com',
       from: process.env.FROM_EMAIL || 'noreply@whisperingmaps.com',
       subject: 'New Newsletter Subscription - Whispering Maps',
       html: `
